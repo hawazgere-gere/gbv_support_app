@@ -1,0 +1,61 @@
+name: gbv_support_app
+description: "A professional support application for GBV survivors with SOS and reporting features."
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.0.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+
+  # --- State Management & Logic ---
+  flutter_riverpod: ^2.5.1
+  uuid: ^4.4.0
+
+  # --- Security & Local Encryption (Textbook Ch. 3.6) ---
+  flutter_secure_storage: ^9.0.0
+  encrypt: ^5.0.3
+
+  # --- System Permissions & Essential Utils (Textbook Ch. 3.7) ---
+  permission_handler: ^11.3.1
+  url_launcher: ^6.3.0
+  http: ^1.1.0
+
+  # --- Emergency & Location (Textbook Ch. 4.4) ---
+  telephony: ^0.2.0
+  geolocator: ^11.0.0
+
+  # --- Data Persistence (Textbook Ch. 2.9) ---
+  sqflite: ^2.3.0
+  path: ^1.9.0
+
+  # --- Multimedia Input (Textbook Ch. 5.2.1) ---
+  image_picker: ^1.0.7
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  # 🚀 Fixed: Moved here so the compiler finds the tool
+  flutter_launcher_icons: ^0.14.4
+
+# 🛠️ Fixed: This block must start at the far left margin (no indentation)
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  # 🛠️ Fixed: Corrected .pngg typo to .png
+  image_path: "assets/images/app_icon.png"
+  min_sdk_android: 21
+  adaptive_icon_background: "#FFFFFF"
+  # 🛠️ Fixed: Pointing this to your main icon for now to avoid build errors
+  adaptive_icon_foreground: "assets/images/app_icon.png"
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
